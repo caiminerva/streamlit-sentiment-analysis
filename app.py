@@ -18,12 +18,11 @@ import base64
 from wordcloud import WordCloud
 from collections import Counter
 
-st.set_config_file("config.toml")
-
 
 # Define the Streamlit app
 def app():
     st.set_page_config(page_title="Sentiment Analysis App", page_icon=":robot_face:")
+    st.set_config_file("config.toml")
     # do various initialization tasks
     nltk.download('stopwords')
     from nltk.corpus import stopwords
