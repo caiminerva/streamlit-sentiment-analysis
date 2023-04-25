@@ -17,7 +17,10 @@ import seaborn as sns
 import base64
 from wordcloud import WordCloud
 from collections import Counter
+import os
 
+# Set the configuration path
+st.set_option('config.fileLocator', os.path.join(os.getcwd(), '.streamlit'))
 
 # Define the Streamlit app
 def app():
