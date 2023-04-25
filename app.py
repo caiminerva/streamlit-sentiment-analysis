@@ -18,7 +18,7 @@ import base64
 from wordcloud import WordCloud
 from collections import Counter
 
-st.set_config_file(".streamlit/config.toml")
+st.set_config_file("config.toml")
 
 
 # Define the Streamlit app
