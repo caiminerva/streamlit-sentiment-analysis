@@ -183,9 +183,9 @@ def app():
             result.loc[result['polarity'] >= 0.1, 'Sentiment'] = "Positive"
             result.loc[result['polarity'] < 0.1, 'Sentiment'] = "Negative"
 
-            result.loc[result['label'] == "1", 'Sentiment_label'] = 1
-            result.loc[result['label'] == "0", 'Sentiment_label'] = 0
-            result.drop(['label'], axis=1, inplace=True)
+            result.loc[result['opinion'] == "1", 'Sentiment_label'] = 1
+            result.loc[result['opinion'] == "0", 'Sentiment_label'] = 0
+            result.drop(['opinion'], axis=1, inplace=True)
 
             st.write('We view the dataset after the sentiment labels are updated.')
             result = result.sort_values(by=['Sentiment'], ascending=False)
